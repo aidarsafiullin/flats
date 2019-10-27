@@ -514,13 +514,19 @@
 
 	<!-- Load CSS -->
 	<script>
-		function loadCSS(hf) {
-			var ms=document.createElement("link");ms.rel="stylesheet";
-			ms.href=hf;document.getElementsByTagName("head")[0].appendChild(ms);
-		}
-		loadCSS("_header.css");              //Header Styles (compress & paste to header after release)
-		loadCSS("_main.css");                //User Styles: Main
-		loadCSS("_media.css");               //User Styles: Media
+		//Load Libs CSS
+		// var ms=document.createElement("link");ms.rel="stylesheet";
+		// ms.href="libs/animate/animate.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	
+		//Header Styles (compress & paste to header after release)
+		// var ms=document.createElement("link");ms.rel="stylesheet";
+		// ms.href="header.css";document.getElementsByTagName("head")[0].appendChild(ms);
+		
+		//User Styles
+		var ms=document.createElement("link");ms.rel="stylesheet";
+		ms.href="main.css";document.getElementsByTagName("head")[0].appendChild(ms);
+		var ms=document.createElement("link");ms.rel="stylesheet";
+		ms.href="media.css";document.getElementsByTagName("head")[0].appendChild(ms);
 	</script>
 
 	<!-- Load CSS compiled without Bootstrap & Header styles (after release) -->
